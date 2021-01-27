@@ -1,0 +1,43 @@
+import java.io.PrintStream;
+import java.util.Scanner;
+import org.biojavax.bio.seq.RichSequence;
+
+public class fetchGenBank
+{
+  public fetchGenBank() {}
+  
+  public static void main(String[] args)
+  {
+    RichSequence rs = null;
+    org.biojavax.bio.db.ncbi.GenbankRichSequenceDB grsdb = new org.biojavax.bio.db.ncbi.GenbankRichSequenceDB();
+    org.biojavax.bio.db.ncbi.GenpeptRichSequenceDB grsdb_pro = new org.biojavax.bio.db.ncbi.GenpeptRichSequenceDB();
+    Scanner input = new Scanner(System.in);
+    try
+    {
+      System.out.println("DNA or Protein  [D/P]?");
+      String type = input.nextLine();
+      if (type.equalsIgnoreCase("D"))
+      {
+        System.out.println("Enter a GenBank accession number or gi number: ");
+        String id = input.nextLine();
+        
+        rs = grsdb.getRichSequence(id);
+        System.out.println(rs.getName() + " | " + rs.getDescription());
+        System.out.println(rs.seqString());
+      }
+      else {
+        System.out.println("Enter a GenBank accession number or gi number: ");
+        String id = input.nextLine();
+        
+        rs = grsdb_pro.getRichSequence(id);
+        System.out.println(rs.getName() + " | " + rs.getDescription());
+        System.out.println(rs.seqString());
+      }
+    }
+    catch (org.biojava.bio.BioException be) {
+      be.printStackTrace();
+      System.exit(-1);
+    }
+    System.out.println("Author: Consuela Jobe");
+  }
+}

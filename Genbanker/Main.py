@@ -1,4 +1,4 @@
 
-def Main:
-    print("This test is working.")
-    print("virtual Env is up and running")
+def Main:  
+val = input("Enter your accession: ") 
+print(val)

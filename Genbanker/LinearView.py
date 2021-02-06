@@ -30,12 +30,12 @@ class CustomTranslator(BiopythonTranslator):
     def compute_feature_box_lindewidth(self, feature):
         return 0
     
-
-translator = CustomTranslator()
-grecord = translator.translate_record("DNA.gb")
-ax, _ = grecord.plot(figure_width=15, strand_in_label_threshold=7)
-grecord.plot_legend(ax=ax, loc=1, ncol=3, frameon=False)
-ax.figure.savefig("A_linear_graph.svg", bbox_inch="tight")
+def rec_itL(file):
+    translator = CustomTranslator()
+    grecord = translator.translate_record(file)
+    ax, _ = grecord.plot(figure_width=15, strand_in_label_threshold=7)
+    grecord.plot_legend(ax=ax, loc=1, ncol=3, frameon=False)
+    ax.figure.savefig("A_linear_graph.svg", bbox_inch="tight")
 
             
             

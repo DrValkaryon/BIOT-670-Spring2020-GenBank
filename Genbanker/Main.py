@@ -2,11 +2,14 @@
 import os
 from Bio import SeqIO
 from Bio import Entrez
+import CircularView
+import LinearView
 def Main():  
     val = input("Enter your accession: ") 
     print(val)
     val2 = input("Enter your email: ")
-    GB_Hunter(val,val2) 
+    CircularView.rec_it( GB_Hunter(val,val2))
+
 
 
 def GB_Hunter (accession, email):
@@ -26,4 +29,5 @@ def GB_Hunter (accession, email):
     print("Parsing...")
     record = SeqIO.read(filename, "genbank")
     print(record)
+    return record
 Main()

@@ -1,0 +1,49 @@
+LOCUS       KO454604                  36 bp    DNA     linear   GSS 17-AUG-2015
+DEFINITION  Lq0000383 Horse genomic sequences flanking the EIAV integration
+            site Equus caballus genomic 5', genomic survey sequence.
+ACCESSION   KO454604
+VERSION     KO454604.1
+DBLINK      BioSample: SAMN03301764
+KEYWORDS    GSS.
+SOURCE      Equus caballus (horse)
+  ORGANISM  Equus caballus
+            Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+            Mammalia; Eutheria; Laurasiatheria; Perissodactyla; Equidae; Equus.
+REFERENCE   1  (bases 1 to 36)
+  AUTHORS   Liu,Q., Wang,X.-F., Ma,J., He,X.-J., Wang,X.-J. and Zhou,J.-H.
+  TITLE     Characterization of Equine Infectious Anemia Virus Integration in
+            the Horse Genome
+  JOURNAL   Viruses 7 (6), 3241-3260 (2015)
+   PUBMED   26102582
+COMMENT     Contact: Zhou,J.-H.,and Liu,Q.
+            State Key Laboratory of Veterinary Biotechnology
+            Harbin Veterinary Research Institute of Chinese Academy of
+            Agricultural Sciences
+            No.427 Maduan Street, Harbin, Hei Long Jiang 150001, P.R. China
+            Tel: +86-133-1461-1425
+            Fax: +86-0451-8953-5024
+            Email: jianhua_uc@126.com; liuqiang_yyy@163.com
+            Seq primer: M13 Forward
+            Class: viral insertion site.
+FEATURES             Location/Qualifiers
+     source          1..36
+                     /organism="Equus caballus"
+                     /mol_type="genomic DNA"
+                     /strain="Mongolian horse"
+                     /db_xref="taxon:9796"
+                     /sex="female"
+                     /cell_type="Fetal equine dermal cell"
+                     /tissue_type="dermal"
+                     /clone_lib="SAMN03301764 Horse genomic sequences flanking
+                     the EIAV integration site"
+                     /dev_stage="embryo"
+                     /note="Genomic DNA was extracted and digested with
+                     restriction endonuclease DraI or SspI, respectively. A
+                     library of integration site junctions containing 371bp
+                     length of the terminal 5' end of integrated EIAV long
+                     terminal repeat (LTR) and up-stream horse genomic DNA was
+                     created by linker-mediated nested PCR (LM-PCR)."
+ORIGIN      
+        1 attccagatg aaatcttgat ccccaaagat aactac
+//
+

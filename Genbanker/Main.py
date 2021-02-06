@@ -8,7 +8,11 @@ def Main():
     val = input("Enter your accession: ") 
     print(val)
     val2 = input("Enter your email: ")
-    CircularView.rec_it( GB_Hunter(val,val2))
+    record = GB_Hunter(val,val2)
+    print(record)
+    record_f = record.format("genbank")
+    print(record_f)
+    CircularView.rec_it(record_f,open (val + ".gb", "w+"))
 
 
 
@@ -20,7 +24,7 @@ def GB_Hunter (accession, email):
         net_handle = Entrez.efetch(
             db="nucleotide", id=accession, rettype="gb", retmode="text"
         )
-        out_handle = open(filename, "w")
+        out_handle = open(filename, "w+")
         out_handle.write(net_handle.read())
         out_handle.close()
         net_handle.close()
@@ -28,6 +32,7 @@ def GB_Hunter (accession, email):
 
     print("Parsing...")
     record = SeqIO.read(filename, "genbank")
+    record_out = SeqIO.write(record,"working","genbank")
     print(record)
-    return record
+    return record_out
 Main()

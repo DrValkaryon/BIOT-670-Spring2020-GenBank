@@ -21,9 +21,9 @@ class ExpressionUnitTranslator(BiopythonTranslator):
             return None
         else:
             return BiopythonTranslator.compute_feature_label(self,feature)
-def rec_it (file):
+def rec_it (file, record):
     translator = ExpressionUnitTranslator()
-    grecord = translator.translate_record(file, CircularGraphicRecord)
+    grecord = translator.translate_record(record, CircularGraphicRecord)
     grecord.top_position = 4800 #sequence index appearing at the top
     ax, _ = grecord.plot(figure_width = 4)
     ax.figure.savefig("C_show_circle.svg", bbox_inches = "tight")

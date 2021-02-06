@@ -17,7 +17,7 @@ class CustomTranslator(BiopythonTranslator):
             "origin_replcation": "1e794b", #green
             "CDS":  "#f6870d", #orange
             "regulatory":  "ff0000", #red
-            "misc_recomb":  "d1e9f1", #light blue
+            "misc_recomb":  "707070", #grey
             "misc_feature":  "f886ff", #lavender
             "backbone":  "820068", #magenta
         }

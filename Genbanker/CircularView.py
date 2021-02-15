@@ -7,21 +7,22 @@ from dna_features_viewer import BiopythonTranslator, CircularGraphicRecord
 class ExpressionUnitTranslator(BiopythonTranslator):
     def compute_feature_color(self, feature):
         color_map = {
-            "origin_replcation": "1e794b", #green
-            "CDS":  "#f6870d", #orange
-            "regulatory":  "ff0000", #red
-            "misc_recomb":  "d1e9f1", #light blue
-            "misc_feature":  "f886ff", #lavender
-            "backbone":  "820068", #magenta
+            
+            "origin_replcation": "green", #green
+            "CDS":  "orange", #orange
+            "regulatory":  "red", #red
+            "mRNA":  "lightblue", #light blue
+            "gene":  "gold", #lavender
+            "source":  "magenta", #magenta
         }
         return color_map[feature.type]
 
     def compute_feature_label(self,feature):
-        if feature.type not in ["CDS", "regulatory"]:
+        if feature.type not in ["CDS", "regulatory", "mRNA", "gene", "source", "origin_replcation"]:
             return None
         else:
             return BiopythonTranslator.compute_feature_label(self,feature)
-def rec_it (file, record):
+def rec_it (record):
     translator = ExpressionUnitTranslator()
     grecord = translator.translate_record(record, CircularGraphicRecord)
     grecord.top_position = 4800 #sequence index appearing at the top

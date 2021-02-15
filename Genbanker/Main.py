@@ -8,11 +8,8 @@ def Main():
     val = input("Enter your accession: ") 
     print(val)
     val2 = input("Enter your email: ")
-    record = GB_Hunter(val,val2)
-    print(record)
-    record_f = record.format("genbank")
-    print(record_f)
-    CircularView.rec_it(record_f,open (val + ".gb", "w+"))
+    GB_Hunter(val,val2)
+    CircularView.rec_it(open("working.gb"))
 
 
 
@@ -32,7 +29,7 @@ def GB_Hunter (accession, email):
 
     print("Parsing...")
     record = SeqIO.read(filename, "genbank")
-    record_out = SeqIO.write(record,"working","genbank")
+    SeqIO.write(record,"working.gb","genbank")
     print(record)
-    return record_out
+    return
 Main()

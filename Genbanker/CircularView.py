@@ -1,6 +1,10 @@
 #Circular view
 
 from dna_features_viewer import BiopythonTranslator, CircularGraphicRecord
+import matplotlib.pyplot as plt
+from dna_features_viewer import BiopythonTranslator
+from Bio import SeqIO
+import numpy as np
 
 #Class that only labels regulatory elements and coding sequences
 
@@ -27,4 +31,5 @@ def rec_it (record):
     grecord = translator.translate_record(record, CircularGraphicRecord)
     grecord.top_position = 4800 #sequence index appearing at the top
     ax, _ = grecord.plot(figure_width = 4)
+    ax.figure.tight_layout()
     ax.figure.savefig("C_show_circle.svg", bbox_inches = "tight")

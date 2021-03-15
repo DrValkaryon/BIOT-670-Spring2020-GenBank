@@ -1,16 +1,15 @@
-
 from kivy.app import App
-from kivy.uix.widget import Widget
+from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.label import Label
+from kivy.uix.button import Button
 
-
-class GenBanker(Widget):
-    pass
-
-
-class GenBanker(App):
+class GenbankerApp(App):
     def build(self):
-        return GenBanker()
-
-
-if __name__ == '__Kivy_Main__':
-    GenBanker().run()
+        mylayout = BoxLayout(orientation="vertical")
+        mylabel = Label(text= "Genbank Gene Viewer")
+        mybutton =Button(text="New Visualization")  
+        mylayout.add_widget(mylabel)
+        mybutton.bind(on_press= lambda a:print(mylabel.text))
+        mylayout.add_widget(mybutton)
+        return mylayout
+GenbankerApp().run()

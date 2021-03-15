@@ -4,12 +4,14 @@ from Bio import SeqIO
 from Bio import Entrez
 import CircularView
 import LinearView
-def Main():  
+def Main(): 
+    #considerations: catch interrupt for file size.
     val = input("Enter your accession: ") 
     print(val)
     val2 = input("Enter your email: ")
     GB_Hunter(val,val2)
     CircularView.rec_it(open("working.gb"))
+    LinearView.rec_itL(open("working.gb"))
 
 
 

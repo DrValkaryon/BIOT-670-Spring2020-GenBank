@@ -10,28 +10,35 @@ SOURCE      Photinus pyralis (common eastern firefly)
             Elateriformia; Elateroidea; Lampyridae; Lampyrinae; Photinus.
 REFERENCE   1  (bases 1 to 2387)
   AUTHORS   de Wet,J.R., Wood,K.V., DeLuca,M., Helinski,D.R. and Subramani,S.
-  TITLE     Firefly luciferase gene: structure and expression in mammalian cells
+  TITLE     Firefly luciferase gene: structure and expression in mammalian
+            cells
   JOURNAL   Mol. Cell. Biol. 7 (2), 725-737 (1987)
    PUBMED   3821727
 COMMENT     Original source text: Firefly DNA, clones pJD[180,181,182,183].
             Clean copy of sequence [1] kindly provided by S.Subramani
             (02-APR-1987).
 FEATURES             Location/Qualifiers
+     source          1..2387
+                     /organism="Photinus pyralis"
+                     /mol_type="genomic DNA"
+                     /db_xref="taxon:7054"
+     mRNA            253..2387
+                     /product="LUC mRNA"
      CDS             join(304..429,487..694,746..1079,1128..1448,1498..1852,
                      1896..2061,2109..2251)
                      /note="Luciferase"
                      /codon_start=1
                      /protein_id="AAA29795.1"
-                     /translation="MEDAKNIKKGPAPFYPLEDGTAGEQLHKAMKRYALVPGTIAFTDA
-                     HIEVNITYAEYFEMSVRLAEAMKRYGLNTNHRIVVCSENSLQFFMPVLGALFIGVAVAP
-                     ANDIYNERELLNSMNISQPTVVFVSKKGLQKILNVQKKLPIIQKIIIMDSKTDYQGFQS
-                     MYTFVTSHLPPGFNEYDFVPESFDRDKTIALIMNSSGSTGLPKGVALPHRTACVRFSHA
-                     RDPIFGNQIIPDTAILSVVPFHHGFGMFTTLGYLICGFRVVLMYRFEEELFLRSLQDYK
-                     IQSALLVPTLFSFFAKSTLIDKYDLSNLHEIASGGAPLSKEVGEAVAKRFHLPGIRQGY
-                     GLTETTSAILITPEGDDKPGAVGKVVPFFEAKVVDLDTGKTLGVNQRGELCVRGPMIMS
-                     GYVNNPEATNALIDKDGWLHSGDIAYWDEDEHFFIVDRLKSLIKYKGYQVAPAELESIL
-                     LQHPNIFDAGVAGLPDDDAGELPAAVVVLEHGKTMTEKEIVDYVASQVTTAKKLRGGVV
-                     FVDEVPKGLTGKLDARKIREILIKAKKGGKSKL"
+                     /translation="MEDAKNIKKGPAPFYPLEDGTAGEQLHKAMKRYALVPGTIAFTD
+                     AHIEVNITYAEYFEMSVRLAEAMKRYGLNTNHRIVVCSENSLQFFMPVLGALFIGVAV
+                     APANDIYNERELLNSMNISQPTVVFVSKKGLQKILNVQKKLPIIQKIIIMDSKTDYQG
+                     FQSMYTFVTSHLPPGFNEYDFVPESFDRDKTIALIMNSSGSTGLPKGVALPHRTACVR
+                     FSHARDPIFGNQIIPDTAILSVVPFHHGFGMFTTLGYLICGFRVVLMYRFEEELFLRS
+                     LQDYKIQSALLVPTLFSFFAKSTLIDKYDLSNLHEIASGGAPLSKEVGEAVAKRFHLP
+                     GIRQGYGLTETTSAILITPEGDDKPGAVGKVVPFFEAKVVDLDTGKTLGVNQRGELCV
+                     RGPMIMSGYVNNPEATNALIDKDGWLHSGDIAYWDEDEHFFIVDRLKSLIKYKGYQVA
+                     PAELESILLQHPNIFDAGVAGLPDDDAGELPAAVVVLEHGKTMTEKEIVDYVASQVTT
+                     AKKLRGGVVFVDEVPKGLTGKLDARKIREILIKAKKGGKSKL"
      exon            <304..429
                      /note="Luciferase"
                      /number=1
@@ -60,7 +67,7 @@ FEATURES             Location/Qualifiers
      exon            2109..>2251
                      /note="Luciferase"
                      /number=7
-ORIGIN
+ORIGIN      5 bp upstream of PstI site.
         1 ctgcagaaat aactaggtac taagcccgtt tgtgaaaagt ggccaaaccc ataaatttgg
        61 caattacaat aaagaagcta aaattgtggt caaactcaca aacattttta ttatatacat
       121 tttagtagct gatgcttata aaagcaatat ttaaatcgta aacaacaaat aaaataaaat
@@ -102,3 +109,4 @@ ORIGIN
      2281 tcttagctat tgtaatatta tatgcaaatt gatgaatggt aattttgtaa ttgtgggtca
      2341 ctgtactatt ttaacgaata ataaaatcag gtataggtaa ctaaaaa
 //
+

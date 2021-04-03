@@ -5,12 +5,8 @@ from Bio import Entrez
 import CircularView
 import LinearView
 
+
 def Main():  
-    val = input("Enter your accession: ") 
-    print(val)
-    val2 = input("Enter your email: ")
-    GB_Hunter(val,val2)
-    LinearView.rec_itL(open("working.gb"))
     CircularView.rec_it(open("working.gb"))
     LinearView.rec_itL(open("working.gb"))
     pass
@@ -36,7 +32,8 @@ def GB_Hunter (accession, email):
     record.features = [f for f in record.features if f.type not in ["gene", "source", "mRNA"]]
     SeqIO.write(record,"working.gb","genbank")
     print(record)
+
     return
-if __name__ == "__main__":
+if __name__ == "__Main__":
    # stuff only to run when not called via 'import' here
    Main()

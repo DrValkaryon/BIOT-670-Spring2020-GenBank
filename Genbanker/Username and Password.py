@@ -2,7 +2,7 @@ from kivymd.app import MDApp
 from kivy.lang import Builder
 from kivy.properties import ObjectProperty
 from kivy.uix.screenmanager import Screen
-
+from Bottom_Tabs import GeneView
 kv = """
 Screen:
     in_class: text
@@ -29,8 +29,7 @@ Screen:
                 id: avatar
                 size_hint: None, None
                 size: "56dp", "56dp"
-                source: "/Users/jellybean/Documents/Capstone Kivy app/GeneView.png"
-        
+                source: "GeneViewLogo.jpg"        
     MDRectangleFlatButton:
         text: 'Submit'
         pos_hint: {'center_x': 0.5, 'center_y': 0.3}
@@ -54,6 +53,8 @@ class Main(MDApp):
         if self.root.in_class.text == 'root':
             label = self.root.ids.show
             label.text = "Sucess"
+            Main.get_running_app().stop()
+            GeneView().run()
         else:
             label = self.root.ids.show
             label.text = "Fail"

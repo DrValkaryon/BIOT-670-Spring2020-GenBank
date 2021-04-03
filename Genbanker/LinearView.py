@@ -13,6 +13,8 @@ from Bio import SeqIO
 import numpy as np
 from bokeh.embed import file_html
 from bokeh.resources import CDN
+from svglib.svglib import svg2rlg
+from reportlab.graphics import renderPM
        
             
 
@@ -51,7 +53,6 @@ def rec_itL(file):
 
     graphic_record.plot_legend(ax=ax, loc = 1, ncol = 3, frameon = False)
     ax.figure.savefig("linear_from_paper.svg", bbox_inches = "tight")
-    bokeh_plot = graphic_record.plot_with_bokeh(figure_width=10, figure_height=2)
-    html = file_html(bokeh_plot, CDN, "my plot")
-    with open("F_bokeh_plot.html", "w") as f:
-        f.write(html) 
+    drawing = svg2rlg("linear_from_paper.svg")
+    renderPM.drawToFile(drawing, "linear.png", fmt="PNG")
+    

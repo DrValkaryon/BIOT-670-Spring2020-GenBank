@@ -100,6 +100,49 @@ BoxLayout:
                 source: ''
                 pos_hint: {'center_x': 0.5, 'center_y': 0.75}
 
+MDBottomNavigationItem:
+            name:  'Annotate'
+            text:  'Annotate'
+            icon:  'pencil'
+
+                    
+            MDToolbar:
+                id: right
+                right_action_items: [['download', lambda x: app.callback_1()],['backup-restore', lambda x: app.callback_2()]]   
+                title: ' Back to Query'
+                id:left
+                left_action_items:[['less-than', lambda x: app.callback_3()]]
+                pos_hint:  {'center_x': 0.5, 'center_y': 0.97}
+
+            MDLabel:
+                id: annotate
+                text: 'Annotate'
+                halign: 'center'
+                font_style: 'H5'
+                pos_hint:  {'center_x': 0.5, 'center_y': 0.7}
+                
+            MDTextFieldRound:
+                id: annotate_by_bp
+                size_hint_x:  .5
+                max_height:  "200dp"
+                multiline:  True
+                hint_text: "Annotate by bp: (Press Return)"
+                helper_text: 'Press enter'
+                helper_text_mode:  "on focus"
+                pos_hint:  {'center_x': 0.5, 'center_y': 0.5}
+
+            MDTextFieldRound:
+                id: annotate_by_sequence
+                size_hint_x:  .5
+                max_height:  "200dp"
+                multiline:  True
+                hint_text: "Annotate by sequence: (Press Return)"
+                helper_text: 'Press enter'
+                helper_text_mode:  "on focus"
+                pos_hint:  {'center_x': 0.5, 'center_y': 0.4}
+                #size_hint: 1, None
+                #height: "30dp"
+                #required:  true
 
         MDBottomNavigationItem:
             name: 'Settings'

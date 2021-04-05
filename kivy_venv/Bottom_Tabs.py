@@ -61,6 +61,20 @@ BoxLayout:
                 text: 'Genbank sequence is needed:'
                 id:gen
                 halign: 'center'
+            ScrollView:
+                do_scroll_x: False
+                do_scroll_y: True
+
+                Label:
+                    size_hint_y: None
+                    id: gbseq
+                    text_theme_color: 'Primary'
+                    color: (0, 0, 0, 1)
+                    canvas: 'before'
+                    height: self.texture_size[1]
+                    text_size: self.width, None
+                    padding: 10, 10
+                    text:''
             
         MDBottomNavigationItem:
             name: 'Map View'
@@ -69,24 +83,22 @@ BoxLayout:
                         
             MDRectangleFlatButton:
                 text: 'Circular'
+                id: cb
                 pos_hint: {'center_x': 0.6, 'center_y': 0.2}
                 on_press:
                     app.visC()
                 halign: 'center'
             MDRectangleFlatButton:
                 text: 'Linear'
+                id: lb
                 pos_hint: {'center_x': 0.4, 'center_y': 0.2}
                 on_press:
                     app.visL()
                 halign: 'center'
             Image:
-                id: circ
-                source: ''
-                pos_hint: {'center_x': 0.5, 'center_y': 0.75}
-            Image:
-                id: lin
-                source: ''
-                pos_hint: {'center_x': 0.5, 'center_y': 0.75}
+                id: map
+                size_hint_y: 0.4
+                pos_hint: {'center_x': 0.5, 'center_y': 0.65}
         MDBottomNavigationItem:
             name:  'Annotate'
             text:  'Annotate'
@@ -107,26 +119,47 @@ BoxLayout:
                 pos_hint:  {'center_x': 0.5, 'center_y': 0.7}
                 
             MDTextFieldRound:
-                id: annotate_by_bp
-                size_hint_x:  .5
+                id: annotate_by_bp_start
+                size_hint_x:  .25
                 max_height:  "200dp"
                 multiline:  True
-                hint_text: "Annotate by bp: (Press Return)"
-                helper_text: 'Press enter'
+                hint_text: "Starting base pair number:"
+                
                 helper_text_mode:  "on focus"
                 pos_hint:  {'center_x': 0.5, 'center_y': 0.5}
+            MDTextFieldRound:
+                id: annotate_by_bp_end
+                size_hint_x:  .25
+                max_height:  "200dp"
+                multiline:  True
+                hint_text: "Ending base pair #:"
+                
+                helper_text_mode:  "on focus"
+                pos_hint:  {'center_x': 0.8, 'center_y': 0.5}
             MDTextFieldRound:
                 id: annotate_by_sequence
                 size_hint_x:  .5
                 max_height:  "200dp"
                 multiline:  True
-                hint_text: "Annotate by sequence: (Press Return)"
-                helper_text: 'Press enter'
+                hint_text: "Annotate by sequence:"
+                
                 helper_text_mode:  "on focus"
                 pos_hint:  {'center_x': 0.5, 'center_y': 0.4}
                 #size_hint: 1, None
                 #height: "30dp"
                 #required:  true
+            MDRectangleFlatButton:
+                text: 'Annotate by bp'
+                pos_hint: {'center_x': 0.6, 'center_y': 0.2}
+                on_press:
+                    app.ann_bp()
+                halign: 'center'
+            MDRectangleFlatButton:
+                text: 'Annotate by sequence'
+                pos_hint: {'center_x': 0.4, 'center_y': 0.2}
+                on_press:
+                    app.ann_seq()
+                halign: 'center'
         MDBottomNavigationItem:
             name: 'Settings'
             text: 'Settings'
@@ -148,26 +181,30 @@ BoxLayout:
             for line in file:
                     load_file = load_file + line
             file.close()
-            self.root.ids.gen.text = load_file
-            self.root.ids.gen.halign = 'left'
-        except:
+            file= open("sequence.txt" , "r")
+            load_seq = ""
+            for line in file:
+                    load_seq = load_seq + line
+            file.close()
+            
+            self.root.ids.gbseq.text = load_file + load_seq
+            self.root.ids.gen.text = ''
+            self.root.ids.gbseq.opacity = 1.0
+        except Exception  as e:
+            print(e)
             self.root.ids.out.text = 'Invalid Genbank ID or email.'
     def visC(self):
         Main.Main()
-        
-        
-        self.root.ids.lin.disabled = True
-        self.root.ids.circ.enabled = True
-        self.img = ''
-        self.root.ids.lin.source = self.img
+        self.root.ids.map.source = 'circular.png'
+        self.root.ids.map.size_hint_y = .8
+        self.root.ids.map.reload()
+     
     def visL(self):
         Main.Main()
-        
-        
-        self.root.ids.circ.disabled = True
-        self.root.ids.lin.enabled = True
-        self.img = 'linear.png'
-        self.root.ids.lin.source = self.img
+        self.root.ids.map.source = 'linear.png'
+        self.root.ids.map.size_hint_y = None
+        self.root.ids.map.reload()
+     
     def callback_1(self):
         try:
             gen_acc = self.root.ids.acc.text
@@ -175,6 +212,17 @@ BoxLayout:
             Main.export(fName)
         except:
             print("error")
+    def ann_seq(self):
+        reg_seq = self.root.ids.annotate_by_sequence.text
+        Main.seq_ann(reg_seq)
+    def ann_bp(self):
+        try:
+
+            bp_start = self.root.ids.annotate_by_bp_start.text
+            bp_end = self.root.ids.annotate_by_bp_end.text
+            Main.seq_bp(bp_start,bp_end)
+        except:
+            print("Invalid bp input")
 
     
 

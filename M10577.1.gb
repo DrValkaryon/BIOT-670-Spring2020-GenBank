@@ -1,0 +1,32 @@
+LOCUS       XELHBAX                  119 bp    mRNA    linear   VRT 28-APR-1993
+DEFINITION  X.laevis alpha-globin mRNA, 3' end.
+ACCESSION   M10577
+VERSION     M10577.1
+KEYWORDS    .
+SOURCE      Xenopus laevis (African clawed frog)
+  ORGANISM  Xenopus laevis
+            Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+            Amphibia; Batrachia; Anura; Pipoidea; Pipidae; Xenopodinae;
+            Xenopus; Xenopus.
+REFERENCE   1  (bases 1 to 119)
+  AUTHORS   Kay,R.M., Harris,R., Patient,R.K. and Williams,J.G.
+  TITLE     Molecular cloning of cDNA sequences coding for the major alpha- and
+            beta-globin polypeptides of adult Xenopus laevis
+  JOURNAL   Nucleic Acids Res. 8 (12), 2691-2707 (1980)
+   PUBMED   7001356
+COMMENT     Original source text: X.laevis cDNA to mRNA, clone pXG6C1.
+FEATURES             Location/Qualifiers
+     source          1..119
+                     /organism="Xenopus laevis"
+                     /mol_type="mRNA"
+                     /db_xref="taxon:8355"
+     CDS             <1..45
+                     /note="alpha-globin"
+                     /codon_start=1
+                     /protein_id="AAA49732.1"
+                     /translation="FLATVSTVLTSKYR"
+ORIGIN      
+        1 ttcttggcta ccgtatctac tgttctgaca tccaaatatc gttaaggctc agcaacaaca
+       61 gcagcagaag tctcaacatc agacatcagt taattatatg caatcaaact gacaagctt
+//
+

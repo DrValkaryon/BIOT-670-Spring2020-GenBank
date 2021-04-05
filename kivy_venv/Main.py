@@ -36,6 +36,10 @@ def GB_Hunter (accession, email):
         f = open('record.txt', 'w')
         f.write(str(record))
         f.close()
+        f = open('sequence.txt', 'w')
+        seq1 = str(record.seq)
+        f.write(seq1)
+        f.close()
     except:
         print("This ain't it, chief.")
     
@@ -43,8 +47,19 @@ def GB_Hunter (accession, email):
     return 
     
 def export (fName):
-    
-    SeqIO.write("working.gb", fName,"genbank")
+    try:
+        fName1 = fName + ".gb"
+        record = SeqIO.read("working.gb", "genbank")
+        SeqIO.write(record, fName1,"genbank")
+    except Exception as e:
+        print(e)
+def seq_ann(seq):
+    print("Placeholder")
+    #annotate by sequence using a combination of regex and biopython's reference library for DNA sequences.
+
+def seq_bp(start,end):
+    print("placeholder")
+    #take a pair of bp or a set of them, comma-delimited, to map features to the referenced sequence.
 
 if __name__ == "__Main__":
    # stuff only to run when not called via 'import' here

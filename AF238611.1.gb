@@ -1,0 +1,92 @@
+LOCUS       AF238611                2915 bp    DNA     linear   MAM 18-SEP-2000
+DEFINITION  Bos taurus interferon tau (IFN-tau-c3) gene, complete cds.
+ACCESSION   AF238611
+VERSION     AF238611.1
+KEYWORDS    .
+SOURCE      Bos taurus (cattle)
+  ORGANISM  Bos taurus
+            Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+            Mammalia; Eutheria; Laurasiatheria; Artiodactyla; Ruminantia;
+            Pecora; Bovidae; Bovinae; Bos.
+REFERENCE   1  (bases 1 to 2915)
+  AUTHORS   Chung,Y.G. and Seidel,G.E. Jr.
+  TITLE     Cloning bovine interferon-tau genes and characterizing their
+            transcriptional expression during early pregnancy
+  JOURNAL   Unpublished
+REFERENCE   2  (bases 1 to 2915)
+  AUTHORS   Chung,Y.G. and Seidel,G.E. Jr.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (25-FEB-2000) Department of Physiology, Colorado State
+            University, ARBL, Fort Collins, CO 80523, USA
+FEATURES             Location/Qualifiers
+     source          1..2915
+                     /organism="Bos taurus"
+                     /mol_type="genomic DNA"
+                     /db_xref="taxon:9913"
+                     /chromosome="8"
+     gene            <2234..>2821
+                     /gene="IFN-tau-c3"
+     mRNA            <2234..>2821
+                     /gene="IFN-tau-c3"
+                     /product="interferon tau"
+     CDS             2234..2821
+                     /gene="IFN-tau-c3"
+                     /codon_start=1
+                     /product="interferon tau"
+                     /protein_id="AAG14168.1"
+                     /translation="MAFVLSLLMALVLVSYGPGRSLGCYLSEDHMLGARENLRLLARM
+                     NRLSPHPCLQDRKDFGLPQEMVEGSQLQKDQAISVLHEMLQQCFNLFHIEHSSAAWNT
+                     TLLEQLCTGLQQQLEDLDACLGPVMGEKDSDMGRMGPILTVKKYFHDIHVYLKEKEYS
+                     DCAWEIIRVEMMRALSSSTTLQKRLRKMGGDLNSL"
+ORIGIN      
+        1 gaattcggca ggcagtatat caattcaccc tgaagagatt gctccaagga ggagagggga
+       61 agagtcaggt tatataggag tttgcaagaa aggggaggta gtctgaacat caaagtagtt
+      121 ttgcgaatta aagaaaacca gctatctcaa gttaaggaat ttagcacttt tcctttgtat
+      181 gggaagaggc aagtgtctgg gctcactgaa aacattcctt tcctcaatct cagctctcct
+      241 ggggcacctt tccttgcatt ttcttgcatc ttgcattttt tcacttcctg agttgccttg
+      301 ggctcacctt agggagtagc tgcaatttgg tagctgttga aaaggcagag gaaccagaga
+      361 tcaaatggcc aacaatcaaa ttcccatcat ggaaaaagga agagagttcc agaaaaacaa
+      421 tctatttctg ctttattgac tatgacaaag cctttgactg tgtggatcac aataaactct
+      481 agaatattct gaaagagatg ggaaaactag accacctgaa ctgcctcttt agaaacctat
+      541 atgcaggtca ggaagcaaca gttagaactg gacatggaac aacagactgg ttccaaatag
+      601 gaaaaggagt acatcaaggc tgtatgttgt caccctgctt atttatctta tatgcagagg
+      661 acagcgtgag aaatgctggg ctggaagaag cacaagctgg attcaagaat cctgggagag
+      721 atatcaataa cctcagatat gcagatgaca ccaaccctta tggcaagaaa gtgaagagga
+      781 actaaaaagc ctcttgatga aagtgaagag gagagtgaaa aggttggctt aaagctcaac
+      841 attcagaaaa cgaagatcat ggcatctggt cccatcactt catgggaaat agatggggaa
+      901 acagtgtcag actttatttt ttggggctcc aaaatcactg cagatggtga ttgcagccat
+      961 gaaattaaaa gacgcttact ccttggaagg aaagttatga ccaacccaga tagcatagta
+     1021 aaaagcagag acattacttg gccaataaaa gtccgtctag tcaaggctat ggtttttcct
+     1081 gtggtcatgt atggatttga gtgttggatt gtgaagaaag ctgagcgcca aagaattgat
+     1141 gcttttgaac tgcggtgttg gagaagactc ttgagagttt cttggactac aaggagatcc
+     1201 aagtccatcc taaaggagat cagtcttggg tgttctttgg aaggactgat gccaaagctg
+     1261 aaactccaat actttggcca ccacatgtga agagttgact cactggaaaa gactctgatg
+     1321 ctgggaggga ttgggagcag gaggaaaagg ggacaacaga ggatgagatg gctggatggc
+     1381 atcaccgaac ttgatgcacg tgaagggttg ggtgaactct gggagttggt gatggacaag
+     1441 gaggcctagt gtgctgcaat tcacggggtc acaaaattgg gacacgactg agagactgaa
+     1501 ctgaactgag cccacaggtg tattccccct ccctgagcgc cctggagggc tggaaactct
+     1561 tgatgactgt gtcatcctgg tttactgata tggcgggaaa tacttcaccc tcggcatctt
+     1621 gtggccccag tgaaatgtaa tctcaggaac ctgaatgaat gttctcaaaa gaacagaaac
+     1681 aactgagtag ttcattcacc cttaattgca agcttatcct ctgtgagaca gaaaagaaaa
+     1741 tacaaacatc aatatggcct gagtgactct gcattcctat gtgtaagata aggagggaaa
+     1801 aatgcagtta agaatcaatg gaaaattata ttcctgagat aagataaaca aaaggaatgt
+     1861 ttatatatat tatacctaaa tttgtacata ataactatgt acacatctat aagtctttgc
+     1921 atacttacat aacttcaccc tttatttagt ttctcattta attgatatac atttacattg
+     1981 acaaacccaa attttattgg gaaaattaaa cttctattgt aaaaattaag agtttagatt
+     2041 gactacattt cctaggtcaa atagaaaata tctaactgaa aacacaaaca ggaagtgaga
+     2101 gagaaatttt cggataatga gtaccgtctt ccctatttaa aagccttgct tagaacgatc
+     2161 atcatcagag aacctacctg aaggttcacc cagaccccat ctcagccagc ccagcagcag
+     2221 ccacatcttc cccatggcct tcgtgctctc tctactgatg gccctggtgc tggtcagcta
+     2281 cggcccggga cgatctctgg gttgttacct gtctgaggac cacatgctag gtgccaggga
+     2341 gaacctcagg ctcctggccc gaatgaacag actctctcct catccctgtc tgcaggacag
+     2401 aaaagacttt ggtcttcctc aggagatggt ggagggcagc cagctccaga aggatcaggc
+     2461 tatctctgtg ctccacgaga tgctccagca gtgcttcaac ctcttccaca tagagcactc
+     2521 gtctgctgct tggaacacca ccctcctgga gcagctctgc actgggctcc aacagcagct
+     2581 ggaggacctg gacgcctgcc tgggcccagt gatgggagag aaggactctg acatgggaag
+     2641 gatgggcccc attctgactg tgaagaagta cttccatgac atccatgtct acctgaaaga
+     2701 aaaggaatac agtgactgcg cctgggaaat catcagagtg gagatgatga gagccctctc
+     2761 ttcatcaacc accttgcaaa aaaggttaag aaagatgggt ggagatctga actcactttg
+     2821 agatgactct cgctgactaa gatgccacat caccttcgta cactcacctg tgttcatttc
+     2881 agaagactct gatttctgct tcagccaccg aattc
+//
+

@@ -32,7 +32,7 @@ def rec_it (record):
     translator = ExpressionUnitTranslator()
     grecord = translator.translate_record(record, CircularGraphicRecord)
     grecord.top_position = 0 #sequence index appearing at the top
-    ax, _ = grecord.plot(figure_width = 13, strand_in_label_threshold=7)
-    ax.figure.savefig("C_show_circle.svg",)
+    ax, _ = grecord.plot(figure_width = 10,figure_height= 8, strand_in_label_threshold=7)
+    ax.figure.savefig("C_show_circle.svg",bbox_inches = "tight")
     drawing = svg2rlg("C_show_circle.svg")
     renderPM.drawToFile(drawing, "circular.png", fmt="PNG")

@@ -38,6 +38,7 @@ class CustomTranslator(BiopythonTranslator):
             "exon":"darkblue",
             "intron": "#fbf3f6"
         }[feature.type]
+       
 
     #background color for legend box
     def compute_feature_box_background(self, feature):

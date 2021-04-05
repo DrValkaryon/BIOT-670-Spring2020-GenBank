@@ -1,0 +1,19 @@
+ID: M15077.1
+Name: PPYLUC
+Description: P.pyralis (firefly) luciferase gene, complete cds
+Number of features: 14
+/molecule_type=DNA
+/topology=linear
+/data_file_division=INV
+/date=26-APR-1993
+/accessions=['M15077']
+/sequence_version=1
+/keywords=['luciferase']
+/source=Photinus pyralis (common eastern firefly)
+/organism=Photinus pyralis
+/taxonomy=['Eukaryota', 'Metazoa', 'Ecdysozoa', 'Arthropoda', 'Hexapoda', 'Insecta', 'Pterygota', 'Neoptera', 'Holometabola', 'Coleoptera', 'Polyphaga', 'Elateriformia', 'Elateroidea', 'Lampyridae', 'Lampyrinae', 'Photinus']
+/references=[Reference(title='Firefly luciferase gene: structure and expression in mammalian cells', ...)]
+/comment=Original source text: Firefly DNA, clones pJD[180,181,182,183].
+Clean copy of sequence [1] kindly provided by S.Subramani
+(02-APR-1987).
+Seq('CTGCAGAAATAACTAGGTACTAAGCCCGTTTGTGAAAAGTGGCCAAACCCATAA...AAA')

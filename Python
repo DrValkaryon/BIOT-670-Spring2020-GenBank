@@ -1,0 +1,8 @@
+import os
+from Bio.Seq import Seq
+from Bio.SeqRecord import SeqRecord
+from Bio.SeqFeature import SeqFeature, FeatureLocation
+from Bio import SeqIO
+
+# get all sequence records for the specified genbank file
+recs = [rec for rec in SeqIO.parse("genbank_file.gbk", "genbank")]
